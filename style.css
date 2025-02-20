@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  background-image: url("background.jpg");
+  /* background-image: url("background.jpg"); */
+  background-color: lightgrey;
 }
 
 .container {
   background-color: white;
-  min-height: 100vh;
+  min-height: 90vh;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -19,20 +20,23 @@ body {
 
 .task-tabs div {
   padding: 1em;
+  cursor: pointer;
 }
 
 .task-area {
-  border: 1px solid lightgray;
+  border: 1px solid gray;
+  border-radius: 8px;
 }
 
 #under-line {
   height: 4px;
-  background-color: pink;
+  background-color: #74c0fc;
   position: absolute;
-  width: 80px;
+  width: 70px;
   left: 0px;
   top: 52px;
   padding: 0px;
+  transition: 0.3s;
 }
 
 .task {
@@ -46,5 +50,70 @@ body {
 }
 
 .task-done-group {
-  background-color: lightyellow;
+  background-color: gray;
+}
+
+#title {
+  text-align: center;
+  color: #74c0fc;
+  font-weight: 700;
+  padding-top: 60px;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 정렬 */
+  margin-top: 20px; /* 위쪽 여백 */
+}
+
+#task-input {
+  width: 50%; /* 입력창 크기 */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+}
+
+#add-button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 18px;
+  background-color: #74c0fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#add-button:hover {
+  background-color: #74c0fc;
+}
+
+@media (max-width: 600px) {
+  .input-area {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  #task-input {
+    font-size: 14px;
+  }
+
+  #add-button {
+    font-size: 16px;
+  }
+}
+
+.fa-calendar {
+  color: #74c0fc;
+  font-size: 30px;
+  margin-right: 10px;
 }
